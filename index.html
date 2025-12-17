@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <title>Holiday Name Tag - Josh Gomke</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header class="name-tag">
+            <div class="snowflakes" aria-hidden="true">
+                <div class="snowflake">❄</div>
+                <div class="snowflake">❅</div>
+                <div class="snowflake">❆</div>
+                <div class="snowflake">❄</div>
+                <div class="snowflake">❅</div>
+            </div>
+            
+            <h1 class="name">Josh Gomke</h1>
+            <p class="title">Senior Web Developer for Office of Marketing and Communications (OMC)</p>
+        </header>
+
+        <main class="content">
+            <div class="display-area" id="displayArea">
+                <p class="prompt-text">Click a button below to learn more about me!</p>
+            </div>
+
+            <div class="buttons">
+                <button class="btn" id="travelBtn" aria-label="Show dream travel destination">
+                    <span class="btn-icon">✈️</span>
+                    <span>Dream Destination</span>
+                </button>
+                
+                <button class="btn" id="favoriteBtn" aria-label="Show favorite movie or book">
+                    <span class="btn-icon">🎬</span>
+                    <span>Favorite Movie/Book</span>
+                </button>
+                
+                <button class="btn" id="titleBtn" aria-label="Show my title">
+                    <span class="btn-icon">💼</span>
+                    <span>My Title</span>
+                </button>
+            </div>
+        </main>
+
+        <footer class="footer">
+            <p>🎄 Happy Holidays! 🎁</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
