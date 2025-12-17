@@ -1,3 +1,7 @@
+// Constants
+const ANIMATION_DURATION = 3000; // milliseconds
+const DOUBLE_TAP_DELAY = 300; // milliseconds
+
 // Wait for DOM to be fully loaded
 document.addEventListener('DOMContentLoaded', () => {
     // Get DOM elements
@@ -21,21 +25,20 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Function to update display area (using textContent for security)
     function updateDisplay(text) {
-        // Clear previous content
-        displayArea.innerHTML = '';
-        
         // Create paragraph element and set text safely
         const paragraph = document.createElement('p');
         paragraph.className = 'answer-text';
         paragraph.textContent = text;
         
+        // Replace content
+        displayArea.textContent = '';
         displayArea.appendChild(paragraph);
         displayArea.classList.add('active');
         
         // Remove active class after animation
         setTimeout(() => {
             displayArea.classList.remove('active');
-        }, 3000);
+        }, ANIMATION_DURATION);
     }
 
     // Add event listeners to buttons
@@ -52,7 +55,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // Prevent double-tap zoom on iOS
-    const DOUBLE_TAP_DELAY = 300; // milliseconds
     let lastTouchEnd = 0;
     document.addEventListener('touchend', (event) => {
         const now = Date.now();
